@@ -1,5 +1,5 @@
 test_that("s3 select api requests work and returns a data frame", {
-  
+  skip_on_os("windows")
   skip_if_offline()
   skip_on_cran()
   Sys.setenv("R_USER_DATA_DIR"=tempdir())
@@ -20,6 +20,7 @@ test_that("s3 select api requests work and returns a data frame", {
 
 test_that("s3 select api requests work with a specific query used", {
   
+  skip_on_os("windows")
   skip_if_offline()
   skip_on_cran()
   Sys.setenv("R_USER_DATA_DIR"=tempdir())
@@ -33,7 +34,8 @@ test_that("s3 select api requests work with a specific query used", {
   mc_cp(tf, "play/iris/iris.csv")
   
   iris <- 
-    mc_sql("play/iris/iris.csv", query = "select s.Species from S3Object s where s.Species = 'setosa' limit 6")
+    mc_sql("play/iris/iris.csv",  query = 
+      "select s.Species from S3Object s where s.Species = 'setosa' limit 6")
   
   is_valid <- nrow(iris) == 6
   

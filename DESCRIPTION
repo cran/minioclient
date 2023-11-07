@@ -1,6 +1,6 @@
 Package: minioclient
 Title: Interface to the 'MinIO' Client
-Version: 0.0.5
+Version: 0.0.6
 Authors@R: c(person(
               "Carl", "Boettiger", 
               email = "cboettig@gmail.com", 
@@ -26,14 +26,14 @@ URL: https://github.com/cboettig/minioclient,
 BugReports: https://github.com/cboettig/minioclient/issues
 Encoding: UTF-8
 RoxygenNote: 7.2.3
-Suggests: spelling, testthat (>= 3.0.0)
+Suggests: spelling, testthat (>= 3.0.0), curl
 Config/testthat/edition: 3
 Imports: fs, glue, tools, utils, processx, jsonlite
 Language: en-US
 NeedsCompilation: no
-Packaged: 2023-08-12 17:43:37 UTC; cboettig
+Packaged: 2023-11-07 00:19:08 UTC; cboettig
 Author: Carl Boettiger [aut, cre] (<https://orcid.org/0000-0002-1642-628X>),
   Markus Skyttner [ctb]
 Maintainer: Carl Boettiger <cboettig@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-09-02 06:40:04 UTC
+Date/Publication: 2023-11-07 10:10:02 UTC
